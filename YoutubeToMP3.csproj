@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\mp3.ico</ApplicationIcon>
+    <AssemblyName>YoutubeToMP3</AssemblyName>
+    <RootNamespace>YoutubeToMP3</RootNamespace>
+    <Version>2026.1.0</Version>
+    <StartupObject>YoutubeToMP3.Program</StartupObject>
+    <AssemblyVersion>2026.1.0</AssemblyVersion>
+    <Company>Dorian NAAJI</Company>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ffmpeg.exe">
+      <LogicalName>ffmpeg.exe</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lib\yt-dlp.exe">
+      <LogicalName>yt-dlp.exe</LogicalName>
+    </EmbeddedResource>
+    <Resource Include="Resources\mp3.ico" />
+  </ItemGroup>
+
+</Project>
